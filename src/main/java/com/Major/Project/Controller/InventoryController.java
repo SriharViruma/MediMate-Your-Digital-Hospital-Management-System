@@ -1,9 +1,10 @@
 package com.Major.Project.Controller;
 
+
+
 import com.Major.Project.DTO.InventoryDTO;
 import com.Major.Project.Entity.Inventory;
 import com.Major.Project.Service.InventoryService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -42,7 +43,7 @@ public class InventoryController {
         return ResponseEntity.noContent().build();
     }
     @PutMapping("/{inventoryId}")
-    public ResponseEntity<InventoryDTO> updateItems(@PathVariable Long inventoryId,@RequestBody Inventory inventory){
+    public ResponseEntity<InventoryDTO> updateItems(@PathVariable Long inventoryId, @RequestBody Inventory inventory){
        InventoryDTO updated= inventoryService.updateItem(inventoryId,inventory);
        return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
     }

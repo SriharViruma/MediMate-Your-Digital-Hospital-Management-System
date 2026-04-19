@@ -1,9 +1,9 @@
 package com.Major.Project.Controller;
 
+
 import com.Major.Project.DTO.DoctorDTO;
 import com.Major.Project.Entity.Doctor;
 import com.Major.Project.Service.DoctorService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +29,7 @@ public class DoctorController {
         return doctorService.createDoctor(doctor);
     }
     @PutMapping("/{id}")
-    public ResponseEntity<DoctorDTO> updateDoctor(@PathVariable Long id,@RequestBody Doctor doctor){
+    public ResponseEntity<DoctorDTO> updateDoctor(@PathVariable Long id, @RequestBody Doctor doctor){
 
         DoctorDTO updated = doctorService.updateDoctor(id, doctor);
         return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();

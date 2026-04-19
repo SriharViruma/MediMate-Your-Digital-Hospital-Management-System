@@ -1,9 +1,9 @@
 package com.Major.Project.Controller;
 
+
+import com.Major.Project.DTO.AppointmentDTO;
 import com.Major.Project.Entity.Appointment;
 import com.Major.Project.Service.AppointmentService;
-import com.Major.Project.DTO.AppointmentDTO;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
